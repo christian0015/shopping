@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="Fr-fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site</title>
+    <link rel="icon" href="logo.png"
+        type="image/x-icon">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(66, 60, 52);
+            color: rgb(214, 151, 15);
+            padding: 15px;
+            font-size: large;
+            box-shadow: 2px 20px 10px #eec264;
+        }
+
+        #menu-button{
+            display: none;
+        }
+
+        .item:hover {
+            color: #bbd3ff;
+            transition: none;
+        }
+
+        #logo {
+            width: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 250px;
+        }
+
+        #menu-bouton {
+            display: none;
+        }
+
+        #entete {
+            background-color: #112344;
+            color: rgb(231, 236, 236);
+            padding: 50px;
+        }
+
+        h1 {
+            color: #c59225;
+            font-size: 300%;
+        }
+
+        h2 {
+            color: #8c85ca;
+        }
+
+        #section1 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            padding: 100px;
+            margin-top: -180px;
+            margin-left: 50px;
+        }
+
+        .text1 {
+            font-size: 150%;
+
+        }
+
+        .sousText1 {
+            color: rgb(214, 214, 214);
+        }
+
+        #img1 {
+            width: 300px;
+            border-radius: 24px;
+            padding: 50px;
+        }
+
+        #section2 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            padding-right: 130px;
+            padding-left: 130px;
+            background-color: #ffffdd;
+        }
+
+        .section3{
+            padding: 50px;
+            background-color: #eec264;
+
+        }
+        #section3 {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(204, 215, 224);
+            padding: 10px;
+            border-radius: 24px;
+            box-shadow: 2px 2px 20px #6b6350;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            transition: 2s;
+        }
+
+        .cardS {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(204, 215, 224);
+            padding: 10px;
+            border-radius: 24px;
+            box-shadow: 2px 2px 20px #6b6350;
+            margin-left: -300px;
+            transition: .35s;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            transition: 2s;
+        }
+
+        #imgCard {
+            border-radius: 12px;
+            width: 250px;
+
+        }
+
+        .card:hover {
+            border-color: aliceblue;
+            border-width: 30px;
+            box-shadow: 2px 10px 20px #9bd1f5;
+            width: 450px;
+            transition: 1s;
+        }
+
+        .cardS:hover {
+            width: 450px;
+            box-shadow: 2px 10px 20px #9bd1f5;
+        }
+
+        .card:hover {
+            border-color: aliceblue;
+            border-width: 30px;
+            box-shadow: 2px 10px 20px #9bd1f5;
+            width: 450px;
+            transition: 1s;
+
+        }
+        
+        footer{
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 700px) {
+            .card:hover+.cardS {
+                margin-left: -20px;
+                transition: .35s;
+
+            }
+
+            .cardS:hover+.cardS {
+                margin-left: -20px;
+                transition: .35s;
+            }
+        }
+
+        h3 {
+            font-size: 150%;
+            font-weight: bold;
+        }
+
+
+        @media only screen and (max-width: 700px) {
+            nav {
+                display: inline;
+                background-color: #ececec;
+                padding: 30px;
+                height: 90%;
+                bottom: 0;
+            }
+
+            .item {
+                font-size: 200%;
+                line-height: 80px;
+            
+            }
+            #menu-button{
+            display: block;
+            background-color: #8274fd;
+            border-radius: 50px;
+        }
+
+            #menu {
+                display: none;
+            }
+
+            #menu.open {
+                display: block;
+            }
+
+            #menu {
+                position: fixed;
+                width: 200px;
+                border-radius: 30px;
+                float: right;
+            }
+
+            #entete {
+                padding: 10px;
+
+            }
+
+            #section1 {
+                display: flex;
+                flex-direction: column-reverse;
+
+                margin: 0;
+                padding: 20px;
+            }
+
+            #section2 {
+                display: flex;
+                flex-direction: column-reverse;
+                margin: 0;
+                padding: 50px;
+            }
+
+            #section3 {
+                margin: 0;
+                gap: 0;
+                display: flex;
+
+            }
+
+            #imgCard {
+                width: 150px;
+            }
+
+            .cardS {
+                width: 200px;
+                height: 330px;
+                display: inline;
+                transition: none;
+            }
+
+            .cardS:hover {
+                width: 200px;
+            }
+
+            .card {
+                display: inline;
+                width: 200px;
+                height: 330px;
+                margin-left: 0px;
+                transition: none;
+            }
+
+            .card:hover {
+                width: 200px;
+                margin-left: 0px;
+            }
+
+            .card:hover {
+                transition: .35s;
+                scale: 1.01;
+            }
+
+            .cardS:hover {
+                scale: 1.01;
+                transition: .35s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="" id="logo">
+        <nav id="menu">
+            <div class="item">Home</div>
+            <div class="item">About</div>
+            <div class="item">Produit</div>
+            <div class="item">Contact</div>
+        </nav>
+        <img src="menu.png" width="50" alt="" id="menu-button">
+
+    </header>
+    <main>
+        <div id="entete">
+            <h1>Clothes matching</h1>
+            <div id="section1">
+                <span class="text1">
+                    <h2>Casablanca fashion style</h2>
+                    <p class="sousText1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. M
+                        inima iste quibusdam suscipit laudantium, dolore et? Harum nostrum veniam quod hic i
+                        llo repudiandae assumenda tempora, voluptates quasi, deleniti quaerat! Fugiat, harum!</p>
+                </span>
+                <img src="img1.png" alt="" id="img1">
+            </div>
+        </div>
+        <div id="section2">
+            <img src="img2.png" alt="" id="img1">
+            <span class="text1">
+                <h2 style="color: #f7257d;">Shopping Style</h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Provident reiciendi
+                s, autem eos veniam perspiciatis quae sapiente exercitationem aliquid officia mi
+                nus consectetur numquam earum, pariatur excepturi rerum ipsam dolores, assumenda at!
+            </span>
+        </div>
+
+        <div class="section3">
+            <h2 style="color: #f7257d; font-size: xx-large;">Solde available</h2>
+            <div id="section3">
+
+                <div class="card"><img src="img3.png" alt="" id="imgCard">
+                    <span>
+                        <h3 style="color: #ce9b23;">Sac bleu</h3>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Provident
+                        <div style="color: #a8426d;; font-size: 180%; font-weight: bolder;">-35% Solde</div>
+                    </span>
+                </div>
+                <div class="cardS"><img src="img4.png" alt="" id="imgCard">
+                    <span>
+                        <h3 style="color: #a3804b;">Sac Rouge</h3>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Provident
+                        <div style="color: #545f13; font-size: 180%; font-weight: bolder;">-35% Solde</div>
+                    </span>
+                </div>
+                <div class="cardS"><img src="img5.png" alt="" id="imgCard">
+                    <span>
+                        <h3 style="color: #a8426d;">Sac Rose</h3>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Provident
+                        <div style="color: #9aaf20; font-size: 180%; font-weight: bolder;">-35% Solde</div>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        <br><br><br><br><br>
+    </main>
+    <footer>
+        <span class="copyright">&copy;2023 Clothes / Csablanca, Maroc </span>
+        <br><br>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    //---------------------------------------Button Menu----------------------------------
+    // Récupération des éléments HTML
+    const menuButton = document.getElementById('menu-button');
+    const menu = document.getElementById('menu');
+
+    // Fonction pour ouvrir le menu
+    function openMenu() {
+        menu.classList.add('open');
+        document.addEventListener('click', closeMenu);
+    }
+
+    // Fonction pour fermer le menu
+    function closeMenu(event) {
+        if (!menu.contains(event.target) && event.target !== menuButton) {
+            menu.classList.remove('open');
+            document.removeEventListener('click', closeMenu);
+        }
+    }
+
+    // Ajout d'un écouteur d'événement pour ouvrir le menu au clic
+    menuButton.addEventListener('click', openMenu);
+</script>
